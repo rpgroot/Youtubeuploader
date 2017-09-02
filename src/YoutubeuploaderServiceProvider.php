@@ -16,7 +16,7 @@ class YoutubeuploaderServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        echo "boot calle   ----   ";
+//         echo "boot calle   ----   ";
 
         $config = realpath(__DIR__.'/../config/youtube.php');
 
@@ -40,7 +40,7 @@ class YoutubeuploaderServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        echo "register calle  ---   ";
+//         echo "register calle  ---   ";
 
         $this->app->singleton('youtubeuploader', function($app) {
             return new Youtubeuploader($app, new \Google_Client);
