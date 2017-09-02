@@ -1,0 +1,43 @@
+{
+    "name": "rpgroot/youtubeuploader",
+    "description": "Upload Video To Youtube channel",
+    "authors": [
+        {
+            "name": "Rasoul pourghaderi",
+            "email": "rp.pourghaderi@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^7.0",
+        "illuminate/support": "^5.4",
+        "google/apiclient": "^2.2",
+        "nesbot/carbon": "^1.22"
+    },
+    "require-dev": {
+        "orchestra/testbench": "~3.2",
+        "phpunit/phpunit": "~5.0",
+        "phpunit/phpcov": "~3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rpgroot\\Youtubeuploader\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rpgroot\\Youtubeuploader\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Rpgroot\\Youtubeuploader\\YoutubeuploaderServiceProvider"
+            ],
+            "aliases": {
+                "Youtube": "Rpgroot\\Youtubeuploader\\Facades\\Youtubeuploader"
+            }
+        }
+    }
+}
